@@ -33,15 +33,16 @@ export const styles = StyleSheet.create({
     height: 175,
     borderRadius: 20,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "transparent",
   },
   blurContainer: {
     height: 175,
     borderRadius: 20,
     overflow: "hidden",
-    borderWidth: 2,
   },
   focused: {
-    borderColor: "white",
+    borderColor: colors.Dark50,
   },
   innerGradient: {
     height: 175,

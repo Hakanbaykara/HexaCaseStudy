@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.Dark1000,
     paddingTop: STATUS_BAR_HEIGHT,
+    justifyContent: "flex-start",
   },
   titleMain: {
     width: "100%",
@@ -25,5 +26,8 @@ export const styles = StyleSheet.create({
     height: 56,
     alignItems: "center",
     justifyContent: "center",
+  },
+  flex: {
+    flex: 1,
   },
 });

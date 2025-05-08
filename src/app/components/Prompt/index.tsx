@@ -33,14 +33,10 @@ const Prompt = ({
         colors={["#943DFF", "#2938DC"]}
         start={{ x: 1, y: 0 }}
         end={{ x: 0, y: 0 }}
-        style={styles.gradientWrapper}
+        style={[styles.gradientWrapper, isFocused && styles.focused]}
       >
         {/* BLUR + DARK OVERLAY */}
-        <BlurView
-          intensity={5}
-          tint="dark"
-          style={[styles.blurContainer, isFocused && styles.focused]}
-        >
+        <BlurView intensity={5} tint="dark" style={styles.blurContainer}>
           <View style={styles.innerGradient} />
           <TextInput
             style={styles.input}
