@@ -3,10 +3,10 @@ import colors from "@/theme/colors";
 
 export const styles = StyleSheet.create({
   container: {
+    paddingTop: 12,
     paddingHorizontal: 24,
   },
   titleMain: {
-    paddingVertical: 19,
     width: "auto",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
     color: colors.Dark50,
   },
   gradientWrapper: {
+    marginTop: 12,
     height: 175,
     borderRadius: 20,
     overflow: "hidden",
@@ -56,6 +57,7 @@ export const styles = StyleSheet.create({
     position: "relative",
     height: 175,
     color: "white",
+    fontFamily: "Manrope_400Regular",
     fontSize: 16,
     lineHeight: 21,
     padding: 12,
@@ -68,6 +70,7 @@ export const styles = StyleSheet.create({
   charCountText: {
     fontSize: 12,
     lineHeight: 13,
+    fontFamily: "Manrope_400Regular",
     color: colors.Dark500,
     letterSpacing: 0,
   },

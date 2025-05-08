@@ -4,20 +4,18 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { styles } from "./styles";
-
-type ButtonProps = {
-  onClick: () => void;
-};
+import type { ButtonProps } from "@/types/app";
 
 const starsImage = require("@/assets/stars.png");
 
-const Button: FC<ButtonProps> = ({ onClick }) => {
+const Button: FC<ButtonProps> = ({ onClick, error }) => {
   const insets = useSafeAreaInsets();
 
   return (
     <TouchableOpacity
       style={[styles.button, { bottom: insets.bottom + 33 }]}
       onPress={onClick}
+      disabled={error}
     >
       <LinearGradient
         colors={["#2938DC", "#943DFF"]}

@@ -1,10 +1,20 @@
 import { StyleSheet } from "react-native";
+
 import colors from "@/theme/colors";
 
 export const styles = StyleSheet.create({
-  scrollViewContent: {
+  main: {
     paddingTop: 24,
     paddingHorizontal: 24,
+  },
+  logoTitle: {
+    fontFamily: "Manrope_800ExtraBold",
+    fontSize: 20,
+    lineHeight: 25,
+    color: colors.Dark50,
+  },
+  scrollViewContent: {
+    paddingTop: 12,
     alignItems: "flex-start",
   },
   itemContainer: {
@@ -24,10 +34,15 @@ export const styles = StyleSheet.create({
   },
   title: {
     marginTop: 6,
+    fontFamily: "Manrope_400Regular",
     color: colors.Dark500,
+    fontSize: 13,
+    lineHeight: 18,
   },
   selectedTitle: {
     color: colors.Dark50,
+    fontFamily: "Manrope_700Bold",
+    fontSize: 13 - 13 / 100,
   },
   background: {
     ...StyleSheet.absoluteFillObject,

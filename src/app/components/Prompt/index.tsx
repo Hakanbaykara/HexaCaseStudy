@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, TextInput, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { BlurView } from "expo-blur";
 
 import { LinearGradient } from "expo-linear-gradient";
@@ -13,19 +13,29 @@ const Prompt = ({
   onChangeText,
   placeholder,
 }: {
-  value: string;
-  onChangeText: (text: string) => void;
+  value: { content: string };
+  onChangeText: React.Dispatch<React.SetStateAction<{ content: string }>>;
   placeholder?: string;
 }) => {
   const [isFocused, setIsFocused] = useState(false);
+
+  const onPressSupriseMe = () =>
+    onChangeText({
+      content:
+        "A professional logo for Harrison & Co. Law Firm, using balanced serif fonts",
+    });
+
   return (
     <View style={styles.container}>
       <View style={styles.titleMain}>
         <Text style={styles.title}>Enter your pompt</Text>
-        <View style={styles.suprizeContainer}>
+        <TouchableOpacity
+          onPress={onPressSupriseMe}
+          style={styles.suprizeContainer}
+        >
           <Text>🎲</Text>
           <Text style={styles.supriseText}>Surprise me</Text>
-        </View>
+        </TouchableOpacity>
       </View>
 
       <LinearGradient
@@ -36,12 +46,12 @@ const Prompt = ({
         style={[styles.gradientWrapper, isFocused && styles.focused]}
       >
         {/* BLUR + DARK OVERLAY */}
-        <BlurView intensity={5} tint="dark" style={styles.blurContainer}>
+        <BlurView intensity={15} tint="dark" style={styles.blurContainer}>
           <View style={styles.innerGradient} />
           <TextInput
             style={styles.input}
-            value={value}
-            onChangeText={onChangeText}
+            value={value.content}
+            onChangeText={(text) => onChangeText({ content: text })}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             placeholder={placeholder}
@@ -52,7 +62,7 @@ const Prompt = ({
           />
           <View style={styles.charCount}>
             <Text style={styles.charCountText}>
-              {value.length} / {MAX_LENGTH}
+              {value.content.length} / {MAX_LENGTH}
             </Text>
           </View>
         </BlurView>

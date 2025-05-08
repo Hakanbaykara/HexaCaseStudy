@@ -6,6 +6,7 @@ import { Stack } from "expo-router";
 import {
   useFonts,
   Manrope_400Regular,
+  Manrope_500Medium,
   Manrope_700Bold,
   Manrope_800ExtraBold,
 } from "@expo-google-fonts/manrope";
@@ -20,6 +21,7 @@ export default function Layout() {
   const [fontsLoaded] = useFonts({
     Manrope_800ExtraBold,
     Manrope_700Bold,
+    Manrope_500Medium,
     Manrope_400Regular,
   });
 

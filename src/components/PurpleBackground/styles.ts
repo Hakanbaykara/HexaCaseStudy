@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    marginTop: 62,
+    marginTop: 49,
   },
   content: {
     flex: 1,
