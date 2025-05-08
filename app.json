@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "hexaCaseStudy",
+    "slug": "hexaCaseStudy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "myapp",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#09090B"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hexa.hexacasestudy"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.hexa.hexacasestudy"
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": ["@config-plugins/detox", "expo-router"]
+  }
+}
