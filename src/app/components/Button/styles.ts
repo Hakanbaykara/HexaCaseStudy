@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     left: horizontalMargin,
   },
   buttonText: {
-    color: colors.white,
+    color: colors.Dark50,
     fontFamily: "Manrope_800ExtraBold",
     fontSize: 17,
     lineHeight: 22,

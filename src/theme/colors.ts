@@ -1,6 +1,6 @@
 const colors = {
-  background: "#09090B",
-  white: "#FAFAFA",
+  Dark1000: "#09090B",
+  Dark50: "#FAFAFA",
   Dark500: "#71717A",
 };
 

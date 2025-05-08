@@ -1,24 +1,25 @@
+import { useState } from "react";
 import { Text, TextInput, View } from "react-native";
 import { BlurView } from "expo-blur";
 
 import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "./styles";
-import PurpleBackground from "@/components/PurpleBackground";
 import colors from "@/theme/colors";
+
+const MAX_LENGTH = 500;
 
 const Prompt = ({
   value,
   onChangeText,
   placeholder,
-  secureTextEntry = false,
 }: {
   value: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
-  secureTextEntry?: boolean;
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
   return (
-    <PurpleBackground>
+    <View style={styles.container}>
       <View style={styles.titleMain}>
         <Text style={styles.title}>Enter your pompt</Text>
         <View style={styles.suprizeContainer}>
@@ -26,7 +27,7 @@ const Prompt = ({
           <Text style={styles.supriseText}>Surprise me</Text>
         </View>
       </View>
-      {/* <View style={styles.wrapper}> */}
+
       <LinearGradient
         // Bottom gradient
         colors={["#943DFF", "#2938DC"]}
@@ -35,25 +36,32 @@ const Prompt = ({
         style={styles.gradientWrapper}
       >
         {/* BLUR + DARK OVERLAY */}
-        <BlurView intensity={15} tint="dark" style={styles.blurContainer}>
-          <LinearGradient
-            colors={["#27272A", "#27272A"]}
-            style={styles.innerGradient}
-          >
-            <TextInput
-              style={styles.input}
-              value={value}
-              onChangeText={onChangeText}
-              placeholder={placeholder}
-              placeholderTextColor={colors.Dark500}
-              secureTextEntry={secureTextEntry}
-              multiline
-              textAlignVertical="top"
-            />
-          </LinearGradient>
+        <BlurView
+          intensity={5}
+          tint="dark"
+          style={[styles.blurContainer, isFocused && styles.focused]}
+        >
+          <View style={styles.innerGradient} />
+          <TextInput
+            style={styles.input}
+            value={value}
+            onChangeText={onChangeText}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            placeholder={placeholder}
+            placeholderTextColor={colors.Dark500}
+            multiline
+            textAlignVertical="top"
+            maxLength={MAX_LENGTH}
+          />
+          <View style={styles.charCount}>
+            <Text style={styles.charCountText}>
+              {value.length} / {MAX_LENGTH}
+            </Text>
+          </View>
         </BlurView>
       </LinearGradient>
-    </PurpleBackground>
+    </View>
   );
 };
 
