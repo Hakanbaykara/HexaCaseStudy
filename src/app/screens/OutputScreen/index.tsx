@@ -1,9 +1,45 @@
-import { Text, View } from "react-native";
+import {
+  SafeAreaView,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+import { useRouter } from "expo-router";
 
-const OutputScreen = () => (
-  <View>
-    <Text>Output Screen</Text>
-  </View>
-);
+import { styles } from "./styles";
+import PurpleBackground from "@/components/PurpleBackground";
+import Prompt from "./components/Propmt";
+
+const cancelImage = require("@/assets/cancel.png");
+const mockImage = require("@/assets/mockImage.png");
+
+const title = "Your design";
+
+const OutputScreen = () => {
+  const router = useRouter();
+
+  // To navigate Output screen
+  const goToInputScreen = () => {
+    router.back();
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <PurpleBackground>
+        <View style={styles.titleMain}>
+          <Text style={styles.title}>{title}</Text>
+          <TouchableOpacity onPress={goToInputScreen}>
+            <Image style={styles.cancelImage} source={cancelImage} />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.imageContainer}>
+          <Image style={styles.mockImage} source={mockImage} />
+        </View>
+        <Prompt />
+      </PurpleBackground>
+    </SafeAreaView>
+  );
+};
 
 export default OutputScreen;

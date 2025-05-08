@@ -4,6 +4,7 @@
     "slug": "hexaCaseStudy",
     "version": "1.0.0",
     "orientation": "portrait",
+    "sdkVersion": "50.0.0",
     "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
     "scheme": "myapp",
@@ -29,6 +30,14 @@
       "favicon": "./src/assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": ["@config-plugins/detox", "expo-router"]
+    "plugins": ["@config-plugins/detox", "expo-router"],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "dfe49579-2aba-4534-9e93-afe1cebdcaca"
+      }
+    }
   }
 }

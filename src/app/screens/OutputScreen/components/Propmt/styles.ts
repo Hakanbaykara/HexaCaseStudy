@@ -1,44 +1,7 @@
-import { Platform, StatusBar, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import colors from "@/theme/colors";
 
-const STATUS_BAR_HEIGHT =
-  Platform.OS === "android" ? StatusBar.currentHeight || 0 : 0;
-
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.Dark1000,
-    paddingTop: STATUS_BAR_HEIGHT,
-    justifyContent: "flex-start",
-  },
-  titleMain: {
-    width: "100%",
-    paddingVertical: 16,
-    paddingHorizontal: 24,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  title: {
-    fontFamily: "Manrope_800ExtraBold",
-    fontSize: 22,
-    lineHeight: 28,
-    textAlign: "center",
-    color: colors.Dark50,
-  },
-  cancelImage: {
-    height: 20,
-    width: 20,
-  },
-  imageContainer: {
-    paddingHorizontal: 24,
-    borderRadius: 16,
-  },
-  mockImage: {
-    height: 342,
-    width: "100%",
-    borderRadius: 16,
-  },
   promptContainer: {
     flex: 1,
     marginTop: 24,

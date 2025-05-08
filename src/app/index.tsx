@@ -1,6 +1,7 @@
 import {
   Keyboard,
   SafeAreaView,
+  StatusBar,
   Text,
   TouchableWithoutFeedback,
   View,
@@ -73,15 +74,17 @@ const Index = () => {
       content: "",
     });
     setCreating(false);
+    setError(false);
   };
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <SafeAreaView style={styles.container}>
-        <View style={styles.titleMain}>
-          <Text style={styles.title}>AI Logo</Text>
-        </View>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" />
         <PurpleBackground>
+          <View style={styles.titleMain}>
+            <Text style={styles.title}>AI Logo</Text>
+          </View>
           {creating && (
             <InfoComp
               done={done}
