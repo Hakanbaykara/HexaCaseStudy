@@ -7,9 +7,9 @@ const STATUS_BAR_HEIGHT =
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.Dark1000,
     paddingTop: STATUS_BAR_HEIGHT,
     justifyContent: "flex-start",
+    backgroundColor: colors.Dark1000,
   },
   titleMain: {
     width: "100%",

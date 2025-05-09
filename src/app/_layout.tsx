@@ -46,12 +46,9 @@ export default function Layout() {
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen
-        name="screens/OutputScreen/index"
+        name="OutputScreen/index"
         options={{ title: "Output", headerShown: false }}
       />
     </Stack>
-    // <PurpleBackground>
-    //   <Slot />
-    // </PurpleBackground>
   );
 }

@@ -6,7 +6,6 @@ module.exports = (api) => {
       [
         "module-resolver",
         {
-          root: ["."],
           alias: {
             // This needs to be mirrored in tsconfig.json
             "@": "./src",

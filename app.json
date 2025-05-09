@@ -4,7 +4,6 @@
     "slug": "hexaCaseStudy",
     "version": "1.0.0",
     "orientation": "portrait",
-    "sdkVersion": "50.0.0",
     "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
     "scheme": "myapp",
@@ -16,28 +15,19 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hexa.hexacasestudy"
+      "bundleIdentifier": "com.hakan.hexaCaseStudy"
     },
     "android": {
-      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.hexa.hexacasestudy"
+      "package": "com.hakan.hexaCaseStudy"
     },
     "web": {
       "favicon": "./src/assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": ["@config-plugins/detox", "expo-router"],
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "dfe49579-2aba-4534-9e93-afe1cebdcaca"
-      }
-    }
+    "plugins": ["@config-plugins/detox", "expo-router"]
   }
 }

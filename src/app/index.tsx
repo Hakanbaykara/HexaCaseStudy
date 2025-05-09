@@ -51,7 +51,7 @@ const Index = () => {
 
   // To navigate Output screen
   const goToOutputScreen = () => {
-    router.push("screens/OutputScreen");
+    router.push("OutputScreen");
   };
 
   useEffect(() => {
