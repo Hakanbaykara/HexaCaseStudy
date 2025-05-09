@@ -9,7 +9,6 @@ const PurpleBackground = ({ children }: { children: React.ReactNode }) => {
       source={backgroundImage}
       style={styles.background}
       resizeMode="cover"
-      imageStyle={styles.image}
     >
       <View style={styles.safeArea}>{children}</View>
     </ImageBackground>

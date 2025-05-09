@@ -1,22 +1,16 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import colors from "@/theme/colors";
-
-const { width: screenWidth } = Dimensions.get("window");
-const horizontalMargin = screenWidth * 0.0615;
-const buttonWidth = screenWidth - 2 * horizontalMargin;
 
 export const styles = StyleSheet.create({
   button: {
-    width: buttonWidth,
+    position: "absolute",
     height: 56,
     borderRadius: 50,
-    marginBottom: 12,
-    position: "absolute",
-    bottom: 12,
-    left: horizontalMargin,
+    left: 24,
+    right: 24,
   },
   buttonText: {
-    color: colors.white,
+    color: colors.Dark50,
     fontFamily: "Manrope_800ExtraBold",
     fontSize: 17,
     lineHeight: 22,

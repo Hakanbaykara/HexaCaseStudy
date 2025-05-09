@@ -15,14 +15,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hexa.hexacasestudy"
+      "bundleIdentifier": "com.hakan.hexaCaseStudy"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.hexa.hexacasestudy"
+      "package": "com.hakan.hexaCaseStudy"
     },
     "web": {
       "favicon": "./src/assets/favicon.png",

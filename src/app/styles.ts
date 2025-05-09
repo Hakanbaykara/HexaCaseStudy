@@ -7,8 +7,9 @@ const STATUS_BAR_HEIGHT =
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.Dark1000,
     paddingTop: STATUS_BAR_HEIGHT,
+    justifyContent: "flex-start",
   },
   titleMain: {
     width: "100%",
@@ -16,7 +17,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    color: colors.white,
+    color: colors.Dark50,
     lineHeight: 22,
     fontFamily: "Manrope_800ExtraBold",
     fontSize: 17,
@@ -25,5 +26,8 @@ export const styles = StyleSheet.create({
     height: 56,
     alignItems: "center",
     justifyContent: "center",
+  },
+  flex: {
+    flex: 1,
   },
 });
